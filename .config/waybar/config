@@ -6,7 +6,7 @@
 
     "modules-left": ["tray"],
     "modules-center": [],
-    "modules-right": ["custom/spotify", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "clock"],
+    "modules-right": ["custom/spotify", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "battery#bat2", "clock"],
 
 
     "idle_inhibitor": {
@@ -72,6 +72,22 @@
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous"
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "yayy {capacity}% {icon}",
+        "format-charging": "{capacity}% charging",
+        "format-plugged": "{capacity}% plugged",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
     }
 }
 
